@@ -7,7 +7,7 @@ const Tools = () => {
       <section className="text-gray-600 body-font ">
         <h1 className="text-sm font-bold text-indigo-500">TOOLS</h1>
         <h1 className="text-black text-3xl font-extrabold py-3">
-          Explore Complete Package Tools For Your Job
+          {/* Explore Complete Package Tools For Your Job */}t
         </h1>
         <div className="container px-5 py-10 mx-auto">
           <div className="flex items-center lg:px-20 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
