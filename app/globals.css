@@ -74,7 +74,3 @@
     @apply bg-background text-foreground;
   }
 }
-
-blueGradient{
-  background-image: radial-gradient(circle at 50% -30%, #232e4e 23%, rgba(105, 120, 182, 0) 55%);;
-}
