@@ -226,7 +226,7 @@ const Page = () => {
                   <SheetTrigger className="text-2xl">
                     <RiMenu4Line />
                   </SheetTrigger>
-                  <SheetContent>
+                  <SheetContent >
                     <SheetHeader>
                       <SheetTitle>
                         <Image
