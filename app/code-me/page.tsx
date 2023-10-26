@@ -169,7 +169,7 @@ const Page = () => {
   }, []);
 
   return (
-    <div  className={`relative page h-full w-screen  -scroll `}>
+    <div className={`relative page h-full w-screen  -scroll `}>
       {openModel ? (
         <div className="relative">
           <div className="backdrop-blur-md h-screen flex justify-center items-center px-10  overflow-hidden lg:px-0">
@@ -213,20 +213,26 @@ const Page = () => {
           </div>
         </div>
       ) : (
-        <div className="relative  overflow-hidden " >
+        <div className="relative  overflow-hidden ">
           {/* navbar */}
 
           <div className={`relative w-full px-6 md:px-10 py-4 `}>
             <div className="flex justify-between items-center w-full gap-2">
               <div>
-                <Image src="/logo.svg" width={140} height={140} alt="logo" />
+                <Link
+                  className="cursor-pointer text-[30px] font-extrabold flex items-center"
+                  href="/"
+                >
+                  <span className="text-indigo-500 bg-transparent">Geeky</span>{" "}
+                  Works
+                </Link>
               </div>
               <div className="inline lg:hidden">
                 <Sheet>
                   <SheetTrigger className="text-2xl">
                     <RiMenu4Line />
                   </SheetTrigger>
-                  <SheetContent >
+                  <SheetContent>
                     <SheetHeader>
                       <SheetTitle>
                         <Image
@@ -271,133 +277,17 @@ const Page = () => {
                   </SheetContent>
                 </Sheet>
               </div>
-              <div className="hidden lg:flex items-center justify-center gap-1 md:gap-4">
-                <div>
-                  <button
-                    onClick={copyRoomId}
-                    className={`flex items-center gap-1  py-1 rounded-full ${
-                      darkTheme ? "lighttheme" : "darktheme"
-                    }`}
-                  >
-                    <span className="text-lg md:text-2xl ">
-                      <BiCopy />
-                    </span>
-                    <span className="text-sm">Room</span>
-                  </button>
-                </div>
-
-                <button
-                  className=" border border-gray-500 rounded-full px-1 py-1 md:px-3 md:py-2 flex"
-                  onClick={handleRunCode}
-                >
-                  <span className="text-2xl text-green-400">
-                    <BsFillPlayFill />
-                  </span>
-                  <span>Run</span>
-                </button>
-
-                <select
-                  onChange={handleSetLanguage}
-                  className="bg-inherit border border-gray-500 rounded-full py-1 md:px-3 md:py-2  outline-none"
-                >
-                  {Languages.map((lg) => (
-                    <option key={lg} className="bg-transparent">
-                      {lg}
-                    </option>
-                  ))}
-                </select>
-              </div>
             </div>
           </div>
 
-          <div className="flex flex-col lg:flex-row px-5 md:px-10 gap-10 pt-3">
-            <div
-              className={` overflow-hidden w-full h-[80vh] rounded-3xl bg-neutral-100`}
-            >
-              <div className={`relative h-full p-5`}>
-                {/* editor */}
-                {loading ? (
-                  <div
-                    className={`  overflow-hidden w-full h-full  ${
-                      loading ? "absolute" : "hidden"
-                    }`}
-                  >
-                    <div className="w-full h-full flex items-center justify-center">
-                      <div className="flex items-center gap-1  cursor-wait">
-                        <span className="text-white animate-spin">
-                          <FiLoader />
-                        </span>
-                        <span className="text-white ">Executing</span>
-                      </div>
-                    </div>
-                  </div>
-                ) : null}
-                <textarea
-                  onChange={handleCode}
-                  className="	 bg-transparent outline-none w-full h-full"
-                  name="code"
-                  id=""
-                  style={{ resize: "none" }}
-                />
-              </div>
-            </div>
-            {/* <div className={`w-full lg:w-[15vw]  rounded-3xl ${darkTheme ? 'bg-gray-900 text-white' : 'bg-neutral-100 text-black'}`}>
-              <div className="py-2">
-                <h2 className="text-xl text-center font-bold">Joined Users</h2>
-              </div>
-              <div className="flex justify-center items-center">
-                <div className="grid grid-cols-2 p-4 gap-4 overflow-hidden">
-                  <Avatar name={"Y O U"} size="70px" round="100px" />
-                  <Avatar name="Tanuj Bhatt" size="70px" round="100px" />
-                  <Avatar name="Anuj Bhatt" size="70px" round="100px" />
-                  <Avatar name="Rekha Bhatt" size="70px" round="100px" />
-                  <Avatar name="Lalit Mohan" size="70px" round="100px" />
-                  <Avatar name="Sandeep BHatt" size="70px" round="100px" />
-                </div>
-              </div>
-            </div> */}
-            <div className={`w-full lg:w-[15vw]  rounded-3xl bg-neutral-100`}>
-              <div className="py-2">
-                <h2 className="text-xl text-center font-bold">Custom Input</h2>
-              </div>
-              <div className="flex justify-center items-center h-full overflow-hidden p-1">
-                <textarea
-                  onChange={handleCustomInput}
-                  className="h-full border-t border-gray-500 bg-transparent outline-none w-full"
-                  name=""
-                  id=""
-                  style={{ resize: "none" }}
-                />
-              </div>
-            </div>
+          <div className="h-screen">
+            <iframe
+              frameBorder="0"
+              height="100%"
+              src="https://onecompiler.com/embed/"
+              width="100%"
+            ></iframe>
           </div>
-          {/* code output */}
-          {showOutputSection ? (
-            <div className=" p-20 h-screen">
-              <div className="py-10">
-                <h2 className="text-2xl font-bold">Code Output</h2>
-              </div>
-              <div>
-                {codeRes != undefined ? (
-                  <div className="flex flex-col gap-y-10">
-                    <div className="text-gray-500">
-                      Output
-                      <h6 className="">{codeRes.output}</h6>
-                    </div>
-                    <div className="text-gray-500">
-                      CPU Time
-                      <h6 className="">{codeRes.cpuTime} ms</h6>
-                    </div>
-                    <div className="text-gray-500">
-                      Memory
-                      <h6 className=""> {codeRes.memory * 0.001} kb</h6>
-                      <div ref={codeOutputRef} />
-                    </div>
-                  </div>
-                ) : null}
-              </div>
-            </div>
-          ) : null}
           {/* Message section */}
           <section className="">
             <Sheet>
@@ -441,12 +331,12 @@ const Page = () => {
                     <div className="">
                       <div className="  text-black h-screen w-full overflow-y-scroll  ">
                         {/* map recent chats */}
-                        <div className=" px-4 gap-y-4 ">
+                        <div className=" md:px-4 gap-y-4 ">
                           {chats.length > 0
                             ? chats.map((cht) => (
                                 <div
                                   key={cht.username}
-                                  className={`px-4 py-2 ${
+                                  className={`md:px-4 py-2 ${
                                     cht.type == "outgoing"
                                       ? "flex justify-end"
                                       : "flex justify-start"
@@ -464,7 +354,7 @@ const Page = () => {
                                     </small>
                                     <h6
                                       style={{ overflowWrap: "break-word" }}
-                                      className={`w-40   rounded-b-xl rounded-tl-xl px-5 py-2 ${
+                                      className={`  rounded-b-xl rounded-tl-xl px-5 py-2 ${
                                         cht.type == "outgoing"
                                           ? "bg-neutral-100 text-black"
                                           : "bg-black text-white"
