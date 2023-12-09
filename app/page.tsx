@@ -40,17 +40,15 @@ export default function Home() {
   return (
     <>
       <div
-        className="xl:px-40 lg:px-35 md:px-16 px-3 py-2 tracking-widest"
+        className=" py-2 tracking-widest"
         // style={{
         //   backgroundImage:
         //     " radial-gradient(circle at 5% -30%, #232e4e 2%, rgba(105, 120, 182, 0) 55%)",
         // }}
       >
-        <Navbar />
         <Hero />
-        <Features />
+        {/* <Features /> */}
         <Tools />
-        <Footer />
       </div>
     </>
   );

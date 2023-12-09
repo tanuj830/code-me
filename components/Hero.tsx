@@ -17,14 +17,15 @@ const Hero = () => {
                 Code Chat.
               </h1>
             </h1>
-            <p className="mb-8 leading-relaxed text-xs md:text-sm">
+            <p className="mb-8 leading-relaxed text-xs md:text-sm text-justify">
               Build Powerfull Interaction Apps with Code Chat & Real Time
-              Interaction. Lorem ipsum dolor sit amet consectetur, adipisicing
-              elit. Fugiat tenetur quibusdam ullam temporibus iure obcaecati, at
-              officia!
+              Interaction. Whether you're seeking to enhance team collaboration,
+              or foster meaningful discussions, our platform offers the tools
+              you need to succeed.
             </p>
-            <p className="text-sm mt-2 text-gray-500 mb-8 w-full hidden lg:inline-block">
-              Neutra shabby chic ramps, viral fixie.
+            <p className="text-sm mt-2 text-gray-500 mb-8 w-full hidden lg:inline-block text-justify">
+              Empower Your Conversations, Elevate Your Connections - Code, Chat,
+              and Connect in Real Time with Geek Lab.
             </p>
             <div className="flex lg:flex-row md:flex-col gap-2">
               <Button className=" px-8 py-8">Start Building</Button>
@@ -50,9 +51,9 @@ const Hero = () => {
           </div>
           <div className="lg:max-w-xl lg:w-full md:w-1/2 w-5/6">
             <img
-              className="object-cover object-center rounded scale-125"
+              className="object-cover object-center rounded "
               alt="hero"
-              src="https://static-assets.pixelied.com/features/fade-image/hero-img.webp?v=2"
+              src="/chat_hero_libraries.png"
             />
           </div>
         </div>

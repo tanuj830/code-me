@@ -169,16 +169,16 @@ const Page = () => {
   }, []);
 
   return (
-    <div className={`relative page h-full w-screen  -scroll `}>
+    <div className={`relative page h-full w-full   `}>
       {openModel ? (
         <div className="relative">
           <div className="backdrop-blur-md h-screen flex justify-center items-center px-10  overflow-hidden lg:px-0">
-            <div className="flex flex-col border bg-neutral-50/40 shadow-sm gap-y-6 sm:scale-125 lg:scale-150 w-full sm:w-[50vw] lg:w-[22vw]  p-6 sm:p-10 rounded-2xl">
+            <div className="flex flex-col border bg-neutral-50/40 shadow-xl gap-y-6 sm:scale-125 lg:scale-150 w-full sm:w-[50vw] lg:w-[22vw]  p-6 sm:p-10 rounded-2xl">
               <div className="mb-2">
                 <h1 className="text-2xl font-bold">Join Room </h1>
-                <p className="text-[10px] text-justify">
-                  Enter room id and if there will not any room id matching to
-                  your input then new room will be created.{" "}
+                <p className="text-[10px] text-justify text-gray-600">
+                  Enter room id or else create room id. After creating room id
+                  share id with your friends.{" "}
                 </p>
               </div>
 
@@ -218,15 +218,6 @@ const Page = () => {
 
           <div className={`relative w-full px-6 md:px-10 py-4 `}>
             <div className="flex justify-between items-center w-full gap-2">
-              <div>
-                <Link
-                  className="cursor-pointer text-[30px] font-extrabold flex items-center"
-                  href="/"
-                >
-                  <span className="text-indigo-500 bg-transparent">Geeky</span>{" "}
-                  Works
-                </Link>
-              </div>
               <div className="inline lg:hidden">
                 <Sheet>
                   <SheetTrigger className="text-2xl">
@@ -280,7 +271,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="h-screen">
+          <div className="h-screen w-full">
             <iframe
               frameBorder="0"
               height="100%"

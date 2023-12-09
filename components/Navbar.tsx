@@ -52,11 +52,12 @@ const Navbar = () => {
           {/* border-b border-gray-700 */}
           <div className="  flex justify-between items-center gap-4  md:gap-44">
             <div className="flex items-center  ">
-              <Link
-                className="cursor-pointer text-2xl md:text-[30px] font-extrabold"
-                href="/"
-              >
-                <span className="text-indigo-600">Geeky</span> Works
+              <Link className="cursor-pointer " href="/">
+                <img
+                  src="https://tse1.mm.bing.net/th?id=OIP.IbTeH0TCxFuIcaiDHi5aQAHaFj&pid=Api&P=0&h=180"
+                  className="w-24"
+                  alt=""
+                />
               </Link>
             </div>
 
@@ -84,7 +85,7 @@ const Navbar = () => {
               <div className="relative  w-full   py-1">
                 <div
                   style={{
-                    backgroundColor: "rgba(0, 0, 0, 0.741)",
+                    backgroundColor: "rgba(67, 27, 210, 0.579)",
                     backdropFilter: "blur(7px)",
                   }}
                   className="absolute    rounded-b-3xl  text-white h-screen w-full text-2xl  p-10"
@@ -97,45 +98,21 @@ const Navbar = () => {
                             ? "text-indigo-800 font-bold"
                             : "text-inherit"
                         }`}
-                        href="/project"
+                        href="/"
                       >
-                        Projects
+                        Home
                       </Link>
                     </div>
                     <div className="text-center">
                       <Link
                         className={`brightness-200 ${
-                          path == "/blog"
+                          path == "/code-me"
                             ? "text-indigo-800 font-bold"
                             : "text-inherit"
                         }`}
-                        href="/blog"
+                        href="/code-me"
                       >
-                        Blog
-                      </Link>
-                    </div>
-                    <div className="text-center">
-                      <Link
-                        className={`brightness-200 ${
-                          path == "/services"
-                            ? "text-indigo-800 font-bold"
-                            : "text-inherit"
-                        }`}
-                        href="/services"
-                      >
-                        Services
-                      </Link>
-                    </div>
-                    <div className="text-center">
-                      <Link
-                        className={`brightness-200 ${
-                          path == "/fun"
-                            ? "text-indigo-800 font-bold"
-                            : "text-inherit"
-                        }`}
-                        href="/fun"
-                      >
-                        Chill Zone
+                        Code Chat
                       </Link>
                     </div>
                     {/* icons */}
@@ -154,12 +131,12 @@ const Navbar = () => {
       <div className="hidden  md:inline-block z-50 relative   backdrop-blur-md overflow-hidden	w-full xl:h-20 h-16 ">
         <div className=" flex justify-between items-center  w-full h-full ">
           <div className=" flex items-center  h-full ">
-            <Link
-              className="cursor-pointer text-[30px] font-extrabold flex items-center"
-              href="/"
-            >
-              <span className="text-indigo-500 bg-transparent">Geeky</span>{" "}
-              Works
+            <Link className="cursor-pointer flex items-center" href="/">
+              <img
+                src="https://tse1.mm.bing.net/th?id=OIP.IbTeH0TCxFuIcaiDHi5aQAHaFj&pid=Api&P=0&h=180"
+                className="w-24"
+                alt=""
+              />
             </Link>
           </div>
           <div className=" flex  items-center md:gap-x-7 h-full ">
@@ -205,8 +182,8 @@ const Navbar = () => {
             </Link> */}
           </div>
           <div className="flex  items-center h-full md:gap-8  ">
-            <Link href="/">Build Resume</Link>
-            <Link href="/">Resume Analyzer</Link>
+            {/* <Link href="/resume">Build Resume</Link>
+            <Link href="/">Resume Analyzer</Link> */}
             <Link href="/code-me">Code Chat</Link>
             <UserButton afterSignOutUrl="/" />
           </div>
