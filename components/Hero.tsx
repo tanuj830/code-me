@@ -19,9 +19,9 @@ const Hero = () => {
             </h1>
             <p className="mb-8 leading-relaxed text-xs md:text-sm text-justify">
               Build Powerfull Interaction Apps with Code Chat & Real Time
-              Interaction. Whether you're seeking to enhance team collaboration,
-              or foster meaningful discussions, our platform offers the tools
-              you need to succeed.
+              Interaction. Whether you&apos;re seeking to enhance team
+              collaboration, or foster meaningful discussions, our platform
+              offers the tools you need to succeed.
             </p>
             <p className="text-sm mt-2 text-gray-500 mb-8 w-full hidden lg:inline-block text-justify">
               Empower Your Conversations, Elevate Your Connections - Code, Chat,
