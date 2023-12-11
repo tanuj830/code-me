@@ -9,7 +9,11 @@ import { FiLoader } from "react-icons/fi";
 import { RiMenu4Line } from "react-icons/ri";
 // import { useRouter, useSearchParams } from "next/navigation";
 import Avatar from "react-avatar";
+import { FaArrowRightLong } from "react-icons/fa6";
+
 import Link from "next/link";
+import { FaUser } from "react-icons/fa";
+
 import {
   BsFillChatHeartFill,
   BsFillPlayFill,
@@ -27,6 +31,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { SiGoogleclassroom } from "react-icons/si";
+
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -39,6 +45,8 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "@/components/ui/menubar";
+import JoinRoomPC from "@/components/JoinRoomPC";
+import JoinRoomMobile from "@/components/JoinRoomMobile";
 
 // import CodeOutput from "@/components/CodeOutput";
 const socket = io.connect("https://codeme-backend-socket-io.onrender.com");
@@ -172,44 +180,24 @@ const Page = () => {
     <div className={`relative page h-full w-full   `}>
       {openModel ? (
         <div className="relative">
-          <div className="backdrop-blur-md h-screen flex justify-center items-center px-10  overflow-hidden lg:px-0">
-            <div className="flex flex-col border bg-neutral-50/40 shadow-xl gap-y-6 sm:scale-125 lg:scale-150 w-full sm:w-[50vw] lg:w-[22vw]  p-6 sm:p-10 rounded-2xl">
-              <div className="mb-2">
-                <h1 className="text-2xl font-bold">Join Room </h1>
-                <p className="text-[10px] text-justify text-gray-600">
-                  Enter room id or else create room id. After creating room id
-                  share id with your friends.{" "}
-                </p>
-              </div>
-
-              <div>
-                <input
-                  className="bg-transparent outline-none border-b w-full"
-                  placeholder="Room ID"
-                  onChange={(event) => {
-                    setRoomID(event.target.value);
-                  }}
-                />
-              </div>
-              <div>
-                <input
-                  className="bg-transparent outline-none border-b w-full"
-                  placeholder="Username"
-                  onChange={(event) => {
-                    setUsername(event.target.value);
-                  }}
-                />
-              </div>
-
-              <div className="mt-2">
-                <button
-                  className="w-full bg-inherit border  hover:bg-white hover:text-black transition-all duration-400 rounded-full py-2"
-                  onClick={joinRoom}
-                >
-                  Join Room
-                </button>
-              </div>
-            </div>
+          {/* <div
+            className="h-40 w-40 absolute blur-3xl left-[30%] top-[25%] animate-pulse"
+            style={{ background: "linear-gradient(blue, #FD8029)" }}
+          /> */}
+          {/* <div className="backdrop-blur-xl  h-screen flex justify-center items-center px-10  overflow-hidden lg:px-0"> */}
+          <div className="">
+            {/* join room pc modal */}
+            <JoinRoomPC
+              setRoomID={setRoomID}
+              setUsername={setUsername}
+              joinRoom={joinRoom}
+            />
+            {/* join modal mobile view */}
+            <JoinRoomMobile
+              setRoomID={setRoomID}
+              setUsername={setUsername}
+              joinRoom={joinRoom}
+            />
           </div>
         </div>
       ) : (

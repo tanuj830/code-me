@@ -53,11 +53,7 @@ const Navbar = () => {
           <div className="  flex justify-between items-center gap-4  md:gap-44">
             <div className="flex items-center  ">
               <Link className="cursor-pointer " href="/">
-                <img
-                  src="https://tse1.mm.bing.net/th?id=OIP.IbTeH0TCxFuIcaiDHi5aQAHaFj&pid=Api&P=0&h=180"
-                  className="w-24"
-                  alt=""
-                />
+                <img src="/favicon.png" className="w-24" alt="" />
               </Link>
             </div>
 

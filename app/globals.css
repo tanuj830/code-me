@@ -25,3 +25,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.cont{
+  @apply xl:px-40 lg:px-36 md:px-16 px-5;
+}

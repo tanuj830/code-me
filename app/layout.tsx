@@ -20,10 +20,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={inter.className + "xl:px-40 lg:px-36 md:px-16 px-5"}>
-          <Navbar />
+        <body className={inter.className + ""}>
           {children}
-          <Footer />
+          {/* xl:px-40 lg:px-36 md:px-16 px-5 */}
         </body>
       </html>
     </ClerkProvider>
