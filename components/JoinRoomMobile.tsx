@@ -64,9 +64,7 @@ const JoinRoomMobile: React.FC<JoinRoomMobileProps> = ({
             <div className="flex justify-center">
               <button
                 className="mt-6 font-semibold text-lg bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-full px-5 py-2 flex items-center gap-2"
-                onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
-                  joinRoom
-                }
+                onClick={joinRoom}
               >
                 Join Room <FaArrowRightLong />
               </button>

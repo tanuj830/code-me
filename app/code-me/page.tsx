@@ -180,11 +180,6 @@ const Page = () => {
     <div className={`relative page h-full w-full   `}>
       {openModel ? (
         <div className="relative">
-          {/* <div
-            className="h-40 w-40 absolute blur-3xl left-[30%] top-[25%] animate-pulse"
-            style={{ background: "linear-gradient(blue, #FD8029)" }}
-          /> */}
-          {/* <div className="backdrop-blur-xl  h-screen flex justify-center items-center px-10  overflow-hidden lg:px-0"> */}
           <div className="">
             {/* join room pc modal */}
             <JoinRoomPC

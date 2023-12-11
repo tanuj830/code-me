@@ -17,13 +17,8 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* color: rgb(var(--foreground-rgb)); */
+  background: white;
 }
 .cont{
   @apply xl:px-40 lg:px-36 md:px-16 px-5;
