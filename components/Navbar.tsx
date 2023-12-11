@@ -48,12 +48,12 @@ const Navbar = () => {
 
       <div className=" inline md:hidden  z-50 relative ">
         {/* for mobile */}
-        <div className="container pt-4 pb-3  w-full   backdrop-blur-sm">
+        <div className="cont pt-3 pb-3  w-full   backdrop-blur-sm">
           {/* border-b border-gray-700 */}
           <div className="  flex justify-between items-center gap-4  md:gap-44">
             <div className="flex items-center  ">
               <Link className="cursor-pointer " href="/">
-                <img src="/favicon.png" className="w-24" alt="" />
+                <img src="/favicon.png" className="w-16" alt="" />
               </Link>
             </div>
 
@@ -67,7 +67,7 @@ const Navbar = () => {
                 </button>
               ) : (
                 <button
-                  className="text-3xl  font-extrabold mr-3 brightness-200"
+                  className="text-3xl  font-extrabold mr-3 brightness-200 duration-1000 transition-all"
                   onClick={handleClick}
                 >
                   <RxCross2 />
@@ -79,14 +79,8 @@ const Navbar = () => {
             {/* <div> */}
             {showMenu === true ? (
               <div className="relative  w-full   py-1">
-                <div
-                  style={{
-                    backgroundColor: "rgba(67, 27, 210, 0.579)",
-                    backdropFilter: "blur(7px)",
-                  }}
-                  className="absolute    rounded-b-3xl  text-white h-screen w-full text-2xl  p-10"
-                >
-                  <div className="flex justify-evenly  w-full h-full flex-col">
+                <div className="absolute    rounded-b-3xl  text-black bg-white  h-screen w-full text-2xl  p-10">
+                  <div className="flex justify-start gap-y-8  w-full h-full flex-col">
                     <div className="text-center">
                       <Link
                         className={`brightness-200 ${
@@ -130,8 +124,8 @@ const Navbar = () => {
             <Link className="cursor-pointer flex items-center gap-x-1" href="/">
               <img src="/favicon.png" className="w-16" alt="" />
               <small className="font-bold text-xl">
-                <span className="text-[#642DF0]">Code </span>
-                <span className="text-[#FD8029]">Chat</span>
+                {/* <span className="text-[#642DF0]">Code </span>
+                <span className="text-[#FD8029]">Chat</span> */}
                 {/* <span className="text-[#8C2DF9]">e</span>
                 <span className="text-[#E72D81]">k</span>{" "}
                 <span className="text-[#642DF0]">C</span>

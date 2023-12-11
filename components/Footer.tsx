@@ -7,11 +7,7 @@ const Footer = () => {
       <footer className="text-gray-600 body-font mt-20 border-t">
         <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-            <img
-              src="https://tse1.mm.bing.net/th?id=OIP.IbTeH0TCxFuIcaiDHi5aQAHaFj&pid=Api&P=0&h=180"
-              className="w-24"
-              alt=""
-            />
+            <img src="/favicon.png" className="w-20" alt="" />
           </a>
           <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
             © 2023 GeekLab —

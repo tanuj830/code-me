@@ -2,10 +2,12 @@ import Link from "next/link";
 import React from "react";
 import { FaFileCode } from "react-icons/fa";
 import { VscMultipleWindows } from "react-icons/vsc";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 const Tools = () => {
   return (
-    <div>
+    <div className="cont">
       <section className="text-gray-600 body-font mt-40">
         <h1 className="text-sm font-bold text-indigo-500">FEATURES</h1>
         <h1 className="text-black text-3xl font-extrabold py-3">
@@ -80,6 +82,7 @@ const Tools = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
