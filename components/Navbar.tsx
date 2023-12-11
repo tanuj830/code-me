@@ -131,12 +131,19 @@ const Navbar = () => {
       <div className="hidden  md:inline-block z-50 relative   backdrop-blur-md overflow-hidden	w-full xl:h-20 h-16 ">
         <div className=" flex justify-between items-center  w-full h-full ">
           <div className=" flex items-center  h-full ">
-            <Link className="cursor-pointer flex items-center" href="/">
-              <img
-                src="https://tse1.mm.bing.net/th?id=OIP.IbTeH0TCxFuIcaiDHi5aQAHaFj&pid=Api&P=0&h=180"
-                className="w-24"
-                alt=""
-              />
+            <Link className="cursor-pointer flex items-center gap-x-1" href="/">
+              <img src="/favicon.png" className="w-16" alt="" />
+              <small className="font-bold text-xl">
+                <span className="text-[#642DF0]">Code </span>
+                <span className="text-[#FD8029]">Chat</span>
+                {/* <span className="text-[#8C2DF9]">e</span>
+                <span className="text-[#E72D81]">k</span>{" "}
+                <span className="text-[#642DF0]">C</span>
+                <span className="text-[#FBC93F]">o</span>
+                <span className="text-[#34CFF8]">l</span>
+                <span className="text-[#FD8029]">a</span>
+                <span className="text-[#FBC93F]">b</span> */}
+              </small>
             </Link>
           </div>
           <div className=" flex  items-center md:gap-x-7 h-full ">

@@ -13,8 +13,8 @@ const Hero = () => {
             <h1 className="xl:text-[45px] lg:text-[40px] text-[27px] text-black font-extrabold">
               Build Powerfull <br className="hidden lg:inline" /> Interaction
               Apps with <br className="hidden lg:inline" />
-              <h1 className="text-indigo-500 xl:text-[45px] xt-[41px] md:text-[30px]">
-                Code Chat.
+              <h1 className="text-indigo-600 xl:text-[45px] xt-[41px] md:text-[30px]">
+                Code <span className="text-[#FD8029]">Chat</span>
               </h1>
             </h1>
             <p className="mb-8 leading-relaxed text-xs md:text-sm text-justify">
