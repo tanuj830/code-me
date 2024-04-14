@@ -40,12 +40,13 @@ export default function Home() {
   return (
     <>
       <div
-        className=" py-2 tracking-widest"
+        className=" "
         // style={{
         //   backgroundImage:
         //     " radial-gradient(circle at 5% -30%, #232e4e 2%, rgba(105, 120, 182, 0) 55%)",
         // }}
       >
+        <Navbar />
         <Hero />
         {/* <Features /> */}
         <Tools />

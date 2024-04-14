@@ -18,8 +18,10 @@
 
 body {
   /* color: rgb(var(--foreground-rgb)); */
-  background: white;
+  background: black;
+  color: white;
+  scroll-behavior: smooth;
 }
 .cont{
-  @apply xl:px-40 lg:px-36 md:px-16 px-5;
+  @apply px-5 md:px-20 lg:px-40;
 }
