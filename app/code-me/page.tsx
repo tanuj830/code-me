@@ -155,9 +155,7 @@ const Page = () => {
     navigator.clipboard.writeText(roomID);
     alert(
       "room id copied. Now you can share this id to your friends so that they can also join your room."
-    );
-  };
-
+    )
   const joinRoom = () => {
     if (roomID !== "") {
       socket.emit("join_room", roomID);
